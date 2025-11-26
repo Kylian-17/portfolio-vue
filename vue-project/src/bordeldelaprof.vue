@@ -1,20 +1,25 @@
 <template>
   <div id="app">
-    <test />
+    <Header />
+    <Portfolio />
+    <Footer />
   </div>
-  <h1>{{ msg }}</h1>
-  <Child v-model="msg" />
 </template>
 
 <script>
+import Header from "./components/header.vue";
+import Portfolio from "./components/portfolio.vue";
+import Footer from "./components/footer.vue";
 import test from "./components/test.vue";
-import { ref } from "vue";
+
 export default {
   components: {
+    Portfolio,
+    Header,
+    Footer,
     test,
   },
 };
-const msg = ref("Hello World");
 </script>
 
 <style>
